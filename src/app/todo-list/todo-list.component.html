@@ -1,0 +1,18 @@
+<p>
+  todo-list works!
+</p>
+<h1> Affichage de la Todo list</h1>
+
+<ul>  
+  <li *ngFor="let todo of todos">
+         <app-todoitem [todo]="todo"></app-todoitem>
+  </li>
+
+ <span> Nombre total de Todos {{todos.length}}</span>
+  </ul>
+<app-form (todoLitevent)="addTodo($event)"></app-form>
+<br>
+
+  <button type="reset" (click)=" deleteTodos()">Effacer les Todos</button>
+
+

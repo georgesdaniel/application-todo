@@ -8,6 +8,8 @@ import { TodoItemComponent } from './todoitem/todoitem.component';
 import { FormComponent } from './form/form.component';
 import {TodoApi} from './service/todo.api';
 import {TodoService} from './service/TodoServices';
+import {GithubApiService} from './service/github.api.service';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -19,8 +21,9 @@ import {TodoService} from './service/TodoServices';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule
   ],
-  providers: [TodoApi, TodoService],
+  providers: [TodoApi, TodoService, GithubApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -4,11 +4,11 @@
 <h1> Affichage de la Todo list</h1>
 
 <ul>  
-  <li *ngFor="let todo of todos">
+  <li *ngFor="let todo of todoList">
          <app-todoitem [todo]="todo"></app-todoitem>
   </li>
 
- <span> Nombre total de Todos {{todos.length}}</span>
+ <span> Nombre total de Todos {{todoList.length}}</span>
   </ul>
 <app-form (todoLitevent)="addTodo($event)"></app-form>
 <br>

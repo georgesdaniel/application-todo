@@ -11,4 +11,11 @@ export class TodoService  {
       return this.todoApi.deletefecthTodo();
 
   }
+
+  addTodoService(event: Todo): Promise<any> {
+    return this.todoApi.addfetchTodo(event);
+
+  }
+
+
   }

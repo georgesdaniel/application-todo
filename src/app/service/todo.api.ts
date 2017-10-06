@@ -16,10 +16,18 @@ export class TodoApi
 deletefecthTodo(): Promise<Array<Todo>> {
   return new Promise(((resolve, reject) => {
       this.listedeTodos = [];
-      resolve(this.listedeTodos);
+      resolve([...this.listedeTodos]);
       reject((e) => (e.message))
     })
   )}
+
+  addfetchTodo(event: Todo): Promise<any> {
+    return new Promise(((resolve, reject) => {
+        this.listedeTodos.unshift(event);
+        resolve([...this.listedeTodos]);
+      })
+    )
+  }
 
 
 }
